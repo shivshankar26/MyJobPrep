@@ -1,13 +1,15 @@
-from sklearn.linear_model import LogisticRegression
 import numpy as np
+from sklearn.linear_model import LinearRegression
 
-# Data
-X = np.array([[0],[1],[2],[3]])
-y = np.array([0,0,1,1])
+# Sample data
+X = np.array([[1],[2],[3],[4],[5]])
+y = np.array([2,4,6,8,10])
 
-model = LogisticRegression()
+# Model
+model = LinearRegression()
 model.fit(X,y)
 
-prediction = model.predict([[1.5]])
+# Prediction
+prediction = model.predict([[6]])
 
-print("Prediction:", prediction)
+print("Prediction for 6:", prediction)
